@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анастасия Иванова](https://up.htmlacademy.ru/adaptive/12/user/315443).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья Лоскутова](https://up.htmlacademy.ru/adaptive/12/user/33515).
 
 ---
 
