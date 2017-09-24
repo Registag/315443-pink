@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Фотографии пользователей</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="ndex.html" class="page-header__logo">
+        <img class="page-header__logo-image" src="#" alt="Pink">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item ">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a>Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="photo">
+        <h1 class="photo__title">Фотографии пользователей</h1>
+        <p class="photo__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <div class="photo__list post-list">
+          <blockquote class="post-list__item">
+            <a href="#" class="post-list__photo-max">
+              <img class="post-list__photo" src="#" width="320" height="137" alt="">
+            </a>
+            <cite class="post-list__author">Анна</cite>
+            <span class="post-list__time">(5 минут назад)</span>
+            <p class="post-list__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <span class="post-list__likes">Нравится: 215</span>
+          </blockquote>
+          <blockquote class="post-list__item">
+            <a href="#" class="post-list__photo-max">
+              <img class="post-list__photo" src="#" width="320" height="137" alt="">
+            </a>
+            <cite class="post-list__author">Левон</cite>
+            <span class="post-list__time">(5 часов назад)</span>
+            <p class="post-list__text">Вчера он на луну летал, сегодня в руки к нам попал</p>
+            <span class="post-list__likes">Нравится: 356</span>
+          </blockquote>
+          <blockquote class="post-list__item">
+            <a href="#" class="post-list__photo-max">
+              <img class="post-list__photo" src="#" width="320" height="137" alt="">
+            </a>
+            <cite class="post-list__author">Антон</cite>
+            <span class="post-list__time">(12 часов назад)</span>
+            <p class="post-list__text">Соседи будут рады!</p>
+            <span class="post-list__likes">Нравится: 666</span>
+          </blockquote>
+          <blockquote class="post-list__item">
+            <a href="#" class="post-list__photo-max">
+              <img class="post-list__photo" src="#" width="320" height="137" alt="">
+            </a>
+            <cite class="post-list__author">Борис</cite>
+            <span class="post-list__time">(20 часов назад)</span>
+            <p class="post-list__text">Здесь могла быть ваша цитата о высоком и вечном!</p>
+            <span class="post-list__likes">Нравится: 215</span>
+          </blockquote>
+          <blockquote class="post-list__item">
+            <a href="#" class="post-list__photo-max">
+              <img class="post-list__photo" src="#" width="320" height="137" alt="">
+            </a>
+            <cite class="post-list__author">Сергей</cite>
+            <span class="post-list__time">(25 часов назад)</span>
+            <p class="post-list__text">Самая кубанская в мире!</p>
+            <span class="post-list__likes">Нравится: 4</span>
+          </blockquote>
+          <blockquote class="post-list__item">
+            <a href="#" class="post-list__photo-max">
+              <img class="post-list__photo" src="#" width="320" height="137" alt="">
+            </a>
+            <cite class="post-list__author">Максим</cite>
+            <span class="post-list__time">(40 часов назад)</span>
+            <p class="post-list__text">Где снег-то?</p>
+            <span class="post-list__likes">Нравится: 150</span>
+          </blockquote>
+          <blockquote class="post-list__item">
+            <a href="#" class="post-list__photo-max">
+              <img class="post-list__photo" src="#" width="320" height="137" alt="">
+            </a>
+            <cite class="post-list__author">Надежда</cite>
+            <span class="post-list__time">(45 часов назад)</span>
+            <p class="post-list__text">Всем GM и взаимные лайки!</p>
+            <span class="post-list__likes">Нравится: 2560</span>
+          </blockquote>
+        </div>
+      </section>
+      <section class="upload">
+        <h2 class="visually-hidden">Обработать и выложить</h2>
+        <p class="upload__slogan">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+        <form class="upload__form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+          <img class="upload__img" src="#" width="282" height="374" alt="Фотография для обрaботки">
+          <ul class="upload__instruments instruments">
+            <li class="instruments__item">
+              <label class="instruments__img instruments__img--crop instruments__img--active" for="crop">Обрезка</label>
+              <input class="upload__range" type="range" id="crop">
+            </li>
+            <li class="instruments-list__item">
+              <label class="instruments__img instruments__img--fill" for="fill">Заливка</label>
+              <input class="upload__range" type="range" id="fill">
+            </li>
+            <li class="instruments-list__item">
+              <label class="instruments__img instruments__img--contrast" for="contrast">Контраст</label>
+              <input class="upload__range" type="range" id="contrast">
+            </li>
+          </ul>
+          <button class="upload__post button" type="submit">Запостить</button>
+          <button class="upload__cancel button" type="reset">Отмена</button>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <img class="page-footer__logo" src="#" alt="Pink">
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="socal__link social__item--twitter" href="#">Twitter</a>
+        </li>
+        <li class="social__item">
+          <a class="socal__link social__item--facebook" href="#">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__item--youtube" href="#">Youtube</a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>
