@@ -13,16 +13,16 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+            <a class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
+            <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+            <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -52,15 +52,15 @@
         <ul class="features__list">
           <li class="features__item">
             <h3 class="features__title">Поднимает настроение</h3>
-            <p class="features__descrption">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
           <li class="features__item">
             <h3 class="features__title">Меняет мир вокруг</h3>
-            <p class="features__descrption">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
           <li class="features__item">
             <h3 class="features__title">Заводит новых друзей</h3>
-            <p class="features__descrption">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
       </section>
@@ -91,58 +91,67 @@
       <section class="price">
         <div class="price-wrapper slider">
           <h2 class="visually-hidden">Тарифы</h2>
-          <div class="price-list slider__list">
-            <table class="price__item">
-              <tr>
-                <th class="price__title" colspan="2">База<br>1,99 USD</th>
-              </tr>
-              <tr>
-                <td class="price__option">Розовый фильтр</td>
-                <td class="price__option-yes">Да</td>
-              </tr>
-              <tr>
-                <td class="price__option">Смайлики</td>
-                <td class="price__option-no">Нет</td>
-              </tr>
-              <tr>
-                <td class="price__option">Коментарии</td>
-                <td class="price__option-yes">Нет</td>
-              </tr>
-            </table>
-            <table class="price__item">
-              <tr>
-                <th class="price__title price__title--hit" colspan="2">Стандарт<br>3,99 USD</th>
-              </tr>
-              <tr>
-                <td class="price__option">Розовый фильтр</td>
-                <td class="price__option-yes">Да</td>
-              </tr>
-              <tr>
-                <td class="price__option">Смайлики</td>
-                <td class="price__option-yes">Да</td>
-              </tr>
-              <tr>
-                <td class="price__option">Коментарии</td>
-                <td class="price__option-yes">Нет</td>
-              </tr>
-            </table>
-            <table class="price__item">
-              <tr>
-                <th class="price__title" colspan="2">Анлим<br>9,99 USD</th>
-              </tr>
-              <tr>
-                <td class="price__option">Розовый фильтр</td>
-                <td class="price__option-yes">Да</td>
-              </tr>
-              <tr>
-                <td class="price__option">Смайлики</td>
-                <td class="price__option-yes">Да</td>
-              </tr>
-              <tr>
-                <td class="price__option">Коментарии</td>
-                <td class="price__option-yes">Да</td>
-              </tr>
-            </table>
+          <div class="price__list slider__list">
+            <section class="price__item slider__item">
+              <div class="price__header">
+                <h4 class="price__title">База</h4>
+                <span class="price__usd">1,99 USD</span>
+              </div>
+              <ul class="price__options">
+                <li class="price__option">
+                  <span class="price__option-title">Розовый фильтр</span>
+                  <span class="price__option-yes">Да</span>
+                </li>
+                <li class="price__option">
+                  <span class="price__option-title">Смайлики</span>
+                  <span class="price__option-no">Нет</span>
+                </li>
+                <li class="price__option">
+                  <span class="price__option-title">Комментарии</span>
+                  <span class="price__option-no">Нет</span>
+                </li>
+              </ul>
+            </section>
+            <section class="price__item slider__item">
+              <div class="price__header">
+                <h4 class="price__title">Стандарт</h4>
+                <span class="price__usd">3,99 USD</span>
+              </div>
+              <ul class="price__options">
+                <li class="price__option">
+                  <span class="price__option-title">Розовый фильтр</span>
+                  <span class="price__option-yes">Да</span>
+                </li>
+                <li class="price__option">
+                  <span class="price__option-title">Смайлики</span>
+                  <span class="price__option-yes">Да</span>
+                </li>
+                <li class="price__option">
+                  <span class="price__option-title">Комментарии</span>
+                  <span class="price__option-no">Нет</span>
+                </li>
+              </ul>
+            </section>
+            <section class="price__item slider__item">
+              <div class="price__header">
+                <h4 class="price__title">Анлим</h4>
+                <span class="price__usd">9,99 USD</span>
+              </div>
+              <ul class="price__options">
+                <li class="price__option">
+                  <span class="price__option-title">Розовый фильтр</span>
+                  <span class="price__option-yes">Да</span>
+                </li>
+                <li class="price__option">
+                  <span class="price__option-title">Смайлики</span>
+                  <span class="price__option-yes">Да</span>
+                </li>
+                <li class="price__option">
+                  <span class="price__option-title">Комментарии</span>
+                  <span class="price__option-yes">Да</span>
+                </li>
+              </ul>
+            </section>
           </div>
           <p class="price__toggles slider__toggles">
             <button class="slider__toggle" type="button">1</button>
@@ -151,9 +160,8 @@
           </p>
         </div>
       </section>
-    </main>
-    <footer class="page-footer">
-      <div class="page-footer__contacts contacts">
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
         <b class="contacts__title">Остались вопросы? Свяжитесь с нами!</b>
         <p class="contacts__list">
           <span class="contacts__phone">Звоните:
@@ -166,8 +174,8 @@
             <a class="contacts__adress" href="https://www.google.ru/maps/place/Большая+Конюшенная+ул.,+19,+Санкт-Петербург,+191186/@59.9387942,30.3208946,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833">ул. Большая Конюшенная, 19/8</a>
           </span>
         </p>
-      </div>
-      <img class="page-footer__map map" src="#" alt="Карта">
-    </footer>
+      </section>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651525!2d30.32089461639195!3d59.93879418187636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1506364865397" width="320" height="200" allowfullscreen></iframe>
+    </main>
   </body>
 </html>

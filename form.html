@@ -13,34 +13,35 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item ">
-            <a href="index.html">Главная</a>
+            <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item ">
-            <a href="photo.html">Фотографии</a>
+            <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a>Конкурс</a>
+            <a class="site-list__link">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
       <section class="competition">
-        <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        <p class="competition__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+        <div class="competition__title-wrap">
+          <h1 class="competition__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </div>
+        <div class="competition__slogan-wrap">
+          <p class="competition__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+        </div>
         <form class="competition__form form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="form__title">
-            Фамилия:<input class="form__field" type="text" name="last-name" placeholder="Укажите фамилию *" required>
-          </label>
-          <label class="form__title">
-            Имя:<input class="form__field" type="text" name="first-name" placeholder="Введите ваше имя *" required>
-          </label>
-          <label class="form__title">
-            Отчество:<input class="form__field" type="text" name="patronymic" placeholder="Ну и отчество тоже">
-          </label>
+          <label class="form__title" for="last-name">Фамилия:</label>
+          <input class="form__field" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
+          <label class="form__title" for="first-name">Имя:</label>
+          <input class="form__field" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *" required>
+          <label class="form__title" for="patronymic">Отчество:</label>
+          <input class="form__field" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
           <fieldset class="form__part achievement">
             <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__list achievement__list">
@@ -70,12 +71,10 @@
               </li>
             </ul>
           </fieldset>
-          <label class="form__title">
-            Номер телефона<input class="form__field" type="tel" name="tel" placeholder="Номер, пожалуйста">
-          </label>
-          <label class="form__title">
-            Адрес почты<input class="form__field" type="email" name="email" placeholder="Введите почту *" required>
-          </label>
+          <label class="form__title" for="tel">Номер телефона</label>
+          <input class="form__field" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста">
+          <label class="form__title" for="email">Адрес почты</label>
+          <input class="form__field" type="email" id="email" name="email" placeholder="Введите почту *" required>
           <fieldset class="form__part os">
             <legend class="form__title">С каким приложением путешествовали?</legend>
             <ul class="form__list os__list">
