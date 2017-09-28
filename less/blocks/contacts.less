@@ -1,0 +1,32 @@
+.contacts {
+  box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  &__info {
+    background-color: @white;
+  }
+
+  &__slogan {
+    .title-text();
+    color: @blue;
+    text-align: center;
+  }
+
+  &__title {
+    .bold-text();
+    line-height: auto;
+    color: @blue;
+    text-align: center;
+  }
+
+  &__link {
+    .title-text();
+    color: @pink;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}

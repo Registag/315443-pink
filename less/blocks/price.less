@@ -1,0 +1,38 @@
+.price {
+  margin-bottom: 48px;
+  box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  background-color: @gray;
+  &__header {
+    text-align: center;
+    background-color: @blue;
+  }
+
+  &__title {
+    .bold-text();
+    line-height: 30px;
+    color: @white;
+    text-transform: uppercase;
+  }
+
+  &__usd {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    color: @white;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  &__options {
+    .option-list();
+    background-color: @white;
+  }
+
+  &__option-title {
+    .usually-text();
+    line-height: 30px;
+    color: @blue;
+    text-transform: uppercase;
+  }
+
+}

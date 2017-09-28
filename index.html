@@ -3,52 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title>Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="#" alt="Pink">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения Pink">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML Academy</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Приложение "Pink"</h1>
-      <section class="download">
-        <h2 class="visually-hidden">Загрузка приложения</h2>
-        <b class="download__slogan">Взгляните на жизнь иначе!</b>
-        <a class="download__button button" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
-        <ul class="download__list">
-          <li class="download__item">
-            <a class="download__link download__link--appstore" href="https://www.apple.com/ru/ios/app-store/">AppStore</a>
-          </li>
-          <li class="download__item">
-            <a class="download__link download__link--googleplay" href="https://play.google.com/store/apps">Google Play</a>
-          </li>
-          <li class="download__item">
-            <a class="download__link download__link--windowsmarket" href="https://www.microsoft.com/ru-RU/store/apps/windows-phone?rtc=1">Windows Phone Market</a>
-          </li>
-        </ul>
-        <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </section>
+        <section class="download">
+          <div class="page-intro page-intro--big">
+            <p class="page-intro__slogan">Взгляните на жизнь иначе!</p>
+          </div>
+          <h2 class="visually-hidden">Загрузка приложения</h2>
+          <a class="download__button" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
+          <ul class="download__list">
+            <li class="download__item">
+              <a class="download__link download__link--appstore" href="https://www.apple.com/ru/ios/app-store/">AppStore</a>
+            </li>
+            <li class="download__item">
+              <a class="download__link download__link--googleplay" href="https://play.google.com/store/apps">Google Play</a>
+            </li>
+            <li class="download__item">
+              <a class="download__link download__link--windowsmarket" href="https://www.microsoft.com/ru-RU/store/apps/windows-phone?rtc=1">Windows Phone Store</a>
+            </li>
+          </ul>
+          <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </section>
       <section class="features">
         <h2 class="visually-hidden">Характеристики приложения</h2>
-        <b class="features__slogan">Устали от серости мегаполиса? Нам есть, что вам предложить!</b>
+        <div class="features__slogan-wrap">
+          <p class="features__slogan">Устали от серости мегаполиса?</p>
+          <p class="features__slogan">Нам есть, что вам предложить!</p>
+        </div>
         <ul class="features__list">
           <li class="features__item">
             <h3 class="features__title">Поднимает настроение</h3>
@@ -63,6 +69,7 @@
             <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
+        <div class="features__photo"></div>
       </section>
       <section class="reviews">
         <div class="reviews-wrapper slider">
@@ -113,7 +120,7 @@
               </ul>
             </section>
             <section class="price__item slider__item">
-              <div class="price__header">
+              <div class="price__header price__header--hit">
                 <h4 class="price__title">Стандарт</h4>
                 <span class="price__usd">3,99 USD</span>
               </div>
@@ -160,22 +167,24 @@
           </p>
         </div>
       </section>
-      <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <b class="contacts__title">Остались вопросы? Свяжитесь с нами!</b>
-        <p class="contacts__list">
-          <span class="contacts__phone">Звоните:
-            <a class="contacts__phone-mobile" href="tel:+78125556666">+7 (812) 555-66-66</a>
-          </span>
-          <span class="contacts__mail">Пишите:
-            <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </span>
-          <span>Приезжайте в гости:
-            <a class="contacts__adress" href="https://www.google.ru/maps/place/Большая+Конюшенная+ул.,+19,+Санкт-Петербург,+191186/@59.9387942,30.3208946,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833">ул. Большая Конюшенная, 19/8</a>
-          </span>
-        </p>
-      </section>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651525!2d30.32089461639195!3d59.93879418187636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1506364865397" width="320" height="200" allowfullscreen></iframe>
+      <div class="contacts">
+        <section class="contacts__info">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="contacts__slogan">Остались вопросы? Свяжитесь с нами!</p>
+          <p class="contacts__list">
+            <span class="contacts__title">Звоните:
+              <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </span>
+            <span class="contacts__title">Пишите:
+              <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </span>
+            <span class="contacts__title">Приезжайте в гости:
+              <a class="contacts__link" href="https://www.google.ru/maps/place/Большая+Конюшенная+ул.,+19,+Санкт-Петербург,+191186/@59.9387942,30.3208946,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833">ул. Большая Конюшенная, 19/8</a>
+            </span>
+          </p>
+        </section>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3043297939217!2d30.322047966189803!3d59.938635638456034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1506540604288" width="320" height="200" allowfullscreen></iframe>
+      </div>
     </main>
   </body>
 </html>
