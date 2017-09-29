@@ -3,47 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>Конкурс</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <a href="ndex.html" class="page-header__logo">
-        <img class="page-header__logo-image" src="#" alt="Pink">
+    <header class="page-header container">
+      <a href="index.html" class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения Pink">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item ">
-            <a class="site-list__link" href="index.html">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav_item ">
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item ">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
+          <li class="main-nav__item ">
+            <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">Конкурс</a>
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Конкурс</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML Academy</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main container">
       <section class="competition">
-        <div class="competition__title-wrap">
-          <h1 class="competition__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <div class="page-intro">
+          <h1 class="page-intro__slogan">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
         <div class="competition__slogan-wrap">
           <p class="competition__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
         </div>
         <form class="competition__form form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="form__title" for="last-name">Фамилия:</label>
-          <input class="form__field" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
-          <label class="form__title" for="first-name">Имя:</label>
-          <input class="form__field" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *" required>
-          <label class="form__title" for="patronymic">Отчество:</label>
-          <input class="form__field" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+          <fieldset class="form__user-name">
+            <legend class="visually-hidden">ФИО</legend>
+            <label class="form__title" for="last-name">Фамилия:</label>
+            <input class="form__field" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
+            <label class="form__title" for="first-name">Имя:</label>
+            <input class="form__field" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *" required>
+            <label class="form__title" for="patronymic">Отчество:</label>
+            <input class="form__field" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+          </fieldset>
           <fieldset class="form__part achievement">
-            <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
+            <legend class="achievement__heading">Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__list achievement__list">
               <li class="achievement__item">
                 <input class="achievement__checkbox achievement__checkbox--checked" type="checkbox" id="selfie" name="selfie" checked>
@@ -71,12 +75,15 @@
               </li>
             </ul>
           </fieldset>
-          <label class="form__title" for="tel">Номер телефона</label>
-          <input class="form__field" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста">
-          <label class="form__title" for="email">Адрес почты</label>
-          <input class="form__field" type="email" id="email" name="email" placeholder="Введите почту *" required>
+          <fieldset class="form__user-contacts">
+            <legend class="visually-hidden">ФИО</legend>
+            <label class="form__title" for="tel">Номер телефона</label>
+            <input class="form__field" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста">
+            <label class="form__title" for="email">Адрес почты</label>
+            <input class="form__field" type="email" id="email" name="email" placeholder="Введите почту *" required>
+          </fieldset>
           <fieldset class="form__part os">
-            <legend class="form__title">С каким приложением путешествовали?</legend>
+            <legend class="os__heading">С каким приложением путешествовали?</legend>
             <ul class="form__list os__list">
               <li class="os__item">
                 <input class="os__radio os__radio--checked" type="radio" id="ios" name="app" value="iOS" checked>
@@ -95,26 +102,26 @@
           <label class="form__title" for="emotions">Опишите свои эмоции</label>
           <textarea class="form__emotions" name="emotions" id="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           <button class="form__button" type="submit">Отправить форму</button>
-          <span class="form__note">* - обязательные поля</span>
+          <p class="form__note"><span class="form__star">*</span> - обязательные поля</p>
         </form>
       </section>
     </main>
-    <footer class="page-footer">
-      <img class="page-footer__logo" src="#" alt="Pink">
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="socal__link social__item--twitter" href="#">Twitter</a>
+    <footer class="page-footer container">
+      <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Pink">
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--twitter" href="#">Twitter</a>
         </li>
-        <li class="social__item">
-          <a class="socal__link social__item--facebook" href="#">Facebook</a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--facebook" href="#">Facebook</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__item--youtube" href="#">Youtube</a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--youtube" href="#">Youtube</a>
         </li>
       </ul>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="page-footer__copyright">
+        <b class="page-footer__copyright-text">Разработано</b>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </body>

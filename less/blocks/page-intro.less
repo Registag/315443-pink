@@ -1,0 +1,37 @@
+.page-intro {
+  box-shadow: 0 0 0 2px blue;
+
+  width: 320px;
+  height: 237px;
+  margin-top: -65px;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #1d2631;
+
+  &--big {
+    height: 462px;
+    background-image:
+      url("../img/iphone-hand-mobile@1x.png"),
+      url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom, center bottom;
+  }
+}
+
+.page-intro__slogan {
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 95px;
+  .title-text();
+  color: @white;
+  font-weight: lighter;
+  text-align: center;
+
+  &--big {
+    display: none;
+  }
+}
