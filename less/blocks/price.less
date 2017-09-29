@@ -1,38 +1,80 @@
 .price {
-  margin-bottom: 48px;
+  position: relative;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 45px;
+  padding-top: 65px;
   box-shadow: 0 0 0 2px rgb(255, 45, 82);
   background-color: @gray;
 
-  &__header {
-    text-align: center;
-    background-color: @blue;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 94px;
+    width: 320px;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-position: right;
   }
+}
 
-  &__title {
-    .bold-text();
-    line-height: 30px;
-    color: @white;
-    text-transform: uppercase;
-  }
+.price__item {
+  padding: 0 20px;
+}
 
-  &__usd {
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 24px;
-    line-height: 30px;
-    color: @white;
-    font-style: normal;
-    font-weight: 300;
-  }
+.price__header {
+  margin-top: 25px;
+  text-align: center;
+  background-color: @blue;
+  border: 2px solid #e5e5e5;
+}
 
-  &__options {
-    .option-list();
-    background-color: @white;
-  }
+.price__title {
+  padding-top: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  .bold-text();
+  line-height: 30px;
+  color: @white;
+  text-transform: uppercase;
+}
 
-  &__option-title {
-    .usually-text();
-    line-height: 30px;
-    color: @blue;
-    text-transform: uppercase;
-  }
+.price__usd {
+  display: block;
+  padding-bottom: 20px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: @white;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.price__options {
+  .option-list();
+  background-color: @white;
+}
+
+.price__option {
+  min-height: 57px;
+  border: 2px solid #e5e5e5;
+  border-top: none;
+}
+
+.price__option-title {
+  display: inline-block;
+  padding-left: 21px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  .usually-text();
+  line-height: 30px;
+  color: @blue;
+  text-transform: uppercase;
+}
+
+.price__toggles {
+  margin: 0;
+  padding-top: 45px;
+  padding-bottom: 50px;
 }

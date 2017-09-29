@@ -1,33 +1,46 @@
 .contacts {
   box-shadow: 0 0 0 2px rgb(255, 45, 82);
+}
 
-  &__info {
-    background-color: @white;
-  }
+.contacts__info {
+  position: relative;
+  background-color: @white;
 
-  &__slogan {
-    .title-text();
-    color: @blue;
-    text-align: center;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -75px;
+    left: -20px;
+    height: 75px;
+    width: 320px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
+}
 
-  &__title {
-    .bold-text();
-    line-height: auto;
-    color: @blue;
-    text-align: center;
-  }
+.contacts__slogan {
+  .title-text();
+  color: @blue;
+  text-align: center;
+}
 
-  &__link {
-    .title-text();
-    color: @pink;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-  }
+.contacts__title {
+  .bold-text();
+  line-height: 22px;
+  color: @blue;
+  text-align: center;
+}
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-  }
+.contacts__link {
+  .title-text();
+  color: @pink;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
 }
