@@ -32,14 +32,15 @@
     cursor: pointer;
   }
 
-  #btn-1:checked ~ .slider__toggles .slider__toggle[for="btn-1"],
-  #btn-2:checked ~ .slider__toggles .slider__toggle[for="btn-2"],
-  #btn-3:checked ~ .slider__toggles .slider__toggle[for="btn-3"] {
+  .slider__radio-1:checked ~ .slider__toggles .slider__toggle[for="btn-1"],
+  .slider__radio-2:checked ~ .slider__toggles .slider__toggle[for="btn-2"],
+  .slider__radio-3:checked ~ .slider__toggles .slider__toggle[for="btn-3"] {
     background-color: @white;
     border-color: @blue;
   }
 
   .slider__item {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -48,33 +49,29 @@
     overflow: hidden;
   }
 
-  .slider__item {
-    display: none;
-  }
-
-  #btn-1:checked ~ .slider__list .slider__item:nth-child(1) {
+  .slider__radio-1:checked ~ .slider__list .slider__item:nth-child(1) {
     display: block;
   }
 
-  #btn-2:checked ~ .slider__list .slider__item:nth-child(2) {
+  .slider__radio-2:checked ~ .slider__list .slider__item:nth-child(2) {
     display: block;
   }
 
-  #btn-3:checked ~ .slider__list .slider__item:nth-child(3) {
+  .slider__radio-3:checked ~ .slider__list .slider__item:nth-child(3) {
     display: block;
   }
 }
 
-@media (min-width:@tablet-width) {
-  #btn-1:checked ~ .slider__list .slider__item:nth-child(1) {
+@media (min-width: @tablet-width) {
+  .slider__radio-1:checked ~ .slider__list .slider__item:nth-child(1) {
     display: flex;
   }
 
-  #btn-2:checked ~ .slider__list .slider__item:nth-child(2) {
+  .slider__radio-2:checked ~ .slider__list .slider__item:nth-child(2) {
     display: flex;
   }
 
-  #btn-3:checked ~ .slider__list .slider__item:nth-child(3) {
+  .slider__radio-3:checked ~ .slider__list .slider__item:nth-child(3) {
     display: flex;
   }
 }
