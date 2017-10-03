@@ -1,0 +1,86 @@
+@media (max-width: @width-except-desktop) {
+  .slider {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+  }
+
+  .slider__radio {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .slider__toggles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .slider__toggle {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: @gray;
+    border: 3px solid @white;
+    vertical-align: middle;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  #btn-1:checked ~ .slider__toggles .slider__toggle[for="btn-1"],
+  #btn-2:checked ~ .slider__toggles .slider__toggle[for="btn-2"],
+  #btn-3:checked ~ .slider__toggles .slider__toggle[for="btn-3"] {
+    background-color: @white;
+    border-color: @blue;
+  }
+
+  .slider__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slider__item {
+    display: none;
+  }
+
+  #btn-1:checked ~ .slider__list .slider__item:nth-child(1) {
+    display: block;
+  }
+
+  #btn-2:checked ~ .slider__list .slider__item:nth-child(2) {
+    display: block;
+  }
+
+  #btn-3:checked ~ .slider__list .slider__item:nth-child(3) {
+    display: block;
+  }
+}
+
+@media (min-width:@tablet-width) {
+  #btn-1:checked ~ .slider__list .slider__item:nth-child(1) {
+    display: flex;
+  }
+
+  #btn-2:checked ~ .slider__list .slider__item:nth-child(2) {
+    display: flex;
+  }
+
+  #btn-3:checked ~ .slider__list .slider__item:nth-child(3) {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__radio {
+    display: none;
+  }
+}

@@ -1,0 +1,42 @@
+.research {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .research {
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 30px;
+    margin-left: auto;
+  }
+
+  .research__title {
+    .bold-text();
+    font-size: 30px;
+    line-height: 36px;
+    color: @black;
+  }
+
+  .research__text {
+    .usually-text();
+    line-height: 24px;
+    color: @blue;
+  }
+
+  .research__link {
+    .usually-text();
+    line-height: 24px;
+    color: @pink;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .research {
+    width: 60%;
+  }
+
+  .research br {
+    display: none;
+  }
+}

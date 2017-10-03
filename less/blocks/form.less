@@ -4,6 +4,7 @@
 
 .form__user-name {
   border: 0;
+  margin: 0;
   margin-bottom: 44px;
   padding: 0;
 }
@@ -16,6 +17,10 @@
   line-height: 30px;
   color: @pink;
   text-transform: uppercase;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .form__field {
@@ -32,28 +37,55 @@
 }
 
 .form__part {
-  padding: 0;
   background-color: @gray;
   border: 0;
+  margin: 0;
+  padding: 0;
   padding-bottom: 44px;
 }
 
 .form__user-contacts {
   padding: 0;
   border: 0;
+  margin: 0;
   margin-bottom: 44px;
 }
 
 .form__list {
   .option-list();
+  padding: 0 20px;
+}
+
+.form__text {
+  padding: 0 20px;
+  border: 0;
+  margin: 0;
+  text-align: center;
+
+}
+
+.form__emotions {
+  box-sizing: border-box;
+  min-height: 204px;
+  width: 100%;
+  border: 2px solid @gray;
+  resize: none;
+  padding: 20px;
+  margin-bottom: 48px;
 }
 
 .form__button {
+  display: block;
   .bold-text();
   line-height: 30px;
   color: @white;
   text-transform: uppercase;
   background-color: @green;
+  text-align: center;
+  border: 0;
+  border-radius: 3px;
+  padding: 16px 48px;
+  margin: 0 auto;
 }
 
 .form__note {
@@ -61,8 +93,124 @@
   line-height: 30px;
   color: @blue;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .form__star {
   color: @pink;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-bottom: 80px;
+  }
+
+  .form__user-name {
+    width: 100%;
+    order: -3;
+    margin-bottom: 0;
+  }
+
+  .form__user-name-list {
+    padding: 0;
+  }
+
+  .form__user-name-item {
+    display: flex;
+    margin-bottom: 52px;
+  }
+
+  .form__user-name-item .form__title {
+    margin-right: 18px;
+  }
+
+  .form__user-name-item .form__field {
+    flex-grow: 1;
+  }
+
+  .form__title {
+    &--hidden {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .form__part {
+    width: 100%;
+    background-color: @white;
+    border: 2px solid @gray;
+  }
+
+  .form__user-contacts {
+    width: 100%;
+    order: -1;
+    border: 2px solid @gray;
+  }
+
+  .form__contacts-item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .form__contacts-item .form__field {
+    width: 100%;
+  }
+
+  .form__text {
+    width: 100%;
+    border: 2px solid @gray;
+    margin-bottom: 67px;
+  }
+
+  .form__button {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .form-note {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .form__user-name {
+    width: 434px;
+  }
+
+  .form__user-name-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .form__user-contacts {
+    padding: 0 40px;
+  }
+
+  .form__contacts-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__contacts-item {
+    width: 375px;
+  }
+
+  .form__contacts-item .form__title {
+    padding-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 15px;
+  }
+
+  .form__button {
+    margin: 0;
+  }
 }
