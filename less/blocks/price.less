@@ -1,7 +1,5 @@
 .price {
   position: relative;
-  margin-left: -20px;
-  margin-right: -20px;
   margin-bottom: 45px;
   padding-top: 65px;
   box-shadow: 0 0 0 2px rgb(255, 45, 82);
@@ -13,21 +11,28 @@
     top: 0;
     left: 0;
     height: 94px;
-    width: 320px;
+    width: 100%;
     background-image: url("../img/bg-triangle-white.svg");
     background-position: right;
   }
 }
 
+.price__list {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .price__item {
-  padding: 0 20px;
+  width: 100%;
 }
 
 .price__header {
+  width: 278px;
   margin-top: 25px;
   text-align: center;
   background-color: @blue;
-  border: 2px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
 }
 
 .price__title {
@@ -56,10 +61,13 @@
   background-color: @white;
 }
 
-.price__option {
-  min-height: 57px;
-  border: 2px solid #e5e5e5;
+.price__parameter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e5e5e5;
   border-top: none;
+  border-bottom: 2px solid #e5e5e5;
 }
 
 .price__option-title {
@@ -73,8 +81,78 @@
   text-transform: uppercase;
 }
 
+.price__option {
+  padding-right: 16px;
+}
+
 .price__toggles {
-  margin: 0;
+  margin: 0 auto;
   padding-top: 45px;
   padding-bottom: 50px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .price__list {
+    padding: 0 20px;
+    padding-bottom: 68px;
+  }
+
+  .price__header {
+    width: 100%;
+  }
+
+  .price__parameter {
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .price__item:first-child {
+    width: 50%;
+  }
+
+  .price__item:first-child .price__header {
+    width: 50%;
+    margin-left: auto;
+  }
+
+  .price__item:first-child .price__option-title {
+    box-sizing: border-box;
+    width: 50%;
+    border-right: 2px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-bottom: 0;
+    margin-top: 0;
+    text-transform: none;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 14px;
+  }
+
+  .price__item:first-child .price__option-title:first-child {
+    border-top: -2px solid #e5e5e5;
+  }
+
+  .price__item:first-child .price__option {
+    margin: 0 auto;
+  }
+
+  .price__item:nth-child(n+2) {
+    width: 25%;
+  }
+
+  .price__item:nth-child(n+2) .price__option-title {
+    .visually-hidden;
+  }
+
+  .price__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__list {
+    padding: 0 10px;
+    padding-bottom: 96px;
+  }
 }

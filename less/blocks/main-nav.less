@@ -2,12 +2,41 @@
   box-shadow: 0 0 0 3px green;
 }
 
+.main-nav__toggle {
+  width: 49px;
+  height: 24px;
+  border: 0;
+  color: transparent;
+  overflow: hidden;
+  background-color: transparent;
+  background-image: url("../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav__toggle-cross {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/icon-menu-cross.svg");
+}
+
 .main-nav__list {
+  display: none;
   .option-list();
+  background-color: @blue;
+}
+
+.main-nav__list-show {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .main-nav__item {
-  background-color: @blue;
+  padding-top: 19px;
+  padding-bottom: 19px;
 }
 
 .main-nav__link {
@@ -19,4 +48,20 @@
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(40, 54, 69, 0.3);
+  }
+
+  .main-nav__item {
+    margin-left: 82px;
+  }
 }

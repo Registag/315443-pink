@@ -1,12 +1,15 @@
 .download {
+  margin-bottom: 20px;
   box-shadow: 0 0 0 2px rgb(255, 45, 82);
 }
 
 .download__wrap {
-  background-color: #1d2631;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-top: 28px;
+  position: relative;
+  box-shadow: 0 0 0 2px blue;
+  padding-top: 65px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
 }
 
 .download__slogan {
@@ -39,11 +42,11 @@
   text-align: center;
   border: 3px solid @white;
   border-radius: 27px;
+  margin-top: 425px;
 }
 
 .download__availability {
   margin: 0;
-  padding-bottom: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -51,4 +54,23 @@
   font-weight: 300;
   color: @white;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .download__wrap {
+    box-sizing: border-box;
+    width: 50%;
+    padding-top: 110px;
+  }
+
+  .download__button {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download__wrap {
+    padding: 0 10px;
+    width: 33%;
+  }
 }

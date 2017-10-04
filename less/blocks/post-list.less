@@ -13,10 +13,6 @@
 
 .post-list__photo {
   display: block;
-
-  &--panorama {
-    margin-left: -20px;
-  }
 }
 
 .post-list__blockquote-wrap {
@@ -48,6 +44,18 @@
   .usually-text();
 }
 
+.post-list__button {
+  width: 13px;
+  height: 12px;
+  border: 0;
+  color: transparent;
+  overflow: hidden;
+  background-color: transparent;
+  background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .post-list__likes {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 12px;
@@ -56,4 +64,38 @@
   text-transform: uppercase;
   font-style: normal;
   font-weight: 400;
+}
+
+@media (min-width: @tablet-width) {
+  .post-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .post-list__item {
+    margin-left: 20px;
+    width: 300px;
+
+    &--panorama {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .post-list {
+    justify-content: space-around;
+  }
+
+  .post-list__item {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 55px;
+
+    &--panorama {
+      margin-bottom: 50px;
+    }
+  }
 }

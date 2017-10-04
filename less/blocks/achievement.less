@@ -20,3 +20,24 @@
   line-height: 30px;
   color: @blue;
 }
+
+@media (min-width: @tablet-width) {
+  .achievement__heading {
+    background-color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .achievement {
+    width: 100%;
+  }
+
+  .achievement__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .achievement__item {
+    width: 30%;
+  }
+}

@@ -10,9 +10,9 @@
     content: "";
     position: absolute;
     bottom: -75px;
-    left: -20px;
+    left: 0;
     height: 75px;
-    width: 320px;
+    width: 100%;
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -26,6 +26,7 @@
 }
 
 .contacts__title {
+  margin-top: 18px;
   .bold-text();
   line-height: 22px;
   color: @blue;
@@ -43,4 +44,33 @@
 .contacts__list {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .contacts__title {
+    width: 50%;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__list {
+    flex-wrap: nowrap;
+  }
+
+  .contacts__title {
+    width: 30%;
+  }
+
+  .contacts__title:nth-child(2) {
+    order: 2;
+  }
 }
