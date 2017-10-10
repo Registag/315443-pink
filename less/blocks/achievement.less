@@ -1,9 +1,19 @@
-.achievement {
-  box-shadow: 0 0 0 2px rgb(255, 45, 82);
+// .achievement {
+//   box-shadow: 0 0 0 2px rgb(255, 45, 82);
+// }
+
+.achievement__item {
+  padding-bottom: 52px;
+}
+
+.achievement__item:last-child {
+  padding-bottom: 48px;
 }
 
 .achievement__heading {
-  padding: 40px 40px;
+  padding: 40px;
+  padding-top: 37px;
+  padding-bottom: 44px;
   .usually-text();
   line-height: 18px;
   color: @pink;
@@ -12,32 +22,93 @@
   background-color: @gray;
 }
 
+.achievement__checkbox {
+  display: none;
+}
+
 .achievement__title {
+  position: relative;
+  padding-left: 70px;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
   color: @blue;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 0;
+    top: -6px;
+    background-color: @white;
+    border: 2px solid @gray-dark;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+}
+
+.achievement__title:hover::before {
+  border: 2px solid @blue;
+}
+
+.achievement__title:active::before {
+  border: 2px solid @pink;
+}
+
+.achievement__checkbox:checked + .achievement__title::before {
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 17px;
 }
 
 @media (min-width: @tablet-width) {
+  .achievement {
+    margin-bottom: 40px;
+  }
+
   .achievement__heading {
+    padding: 10px 32px;
     background-color: @white;
+  }
+
+  .achievement__list {
+    padding: 36px 58px;
+    padding-bottom: 5px;
+  }
+
+  .achievement__title {
+    padding-left: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .achievement {
     width: 100%;
+    margin-bottom: 38px;
   }
 
   .achievement__list {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-content: space-between;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin: 0;
+    height: 166px;
   }
 
   .achievement__item {
-    width: 30%;
+    max-width: 33%;
+  }
+
+  .achievement__item {
+    margin-right: 55px;
   }
 }

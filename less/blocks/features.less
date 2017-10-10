@@ -1,12 +1,12 @@
 .features {
-  box-shadow: 0 0 0 2px rgb(255, 45, 82);
-  margin-bottom: 43px;
+  // box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  margin-bottom: 41px;
   background-color: @gray;
 }
 
 .features__slogan-wrap {
   padding-bottom: 10px;
-  padding-top: 10px;
+  margin-top: 40px;
   background-color: @white;
 }
 
@@ -20,8 +20,8 @@
 .features__list {
   position: relative;
   .option-list();
-  padding-top: 50px;
-  padding-bottom: 277px;
+  padding-top: 44px;
+  padding-bottom: 305px;
 
   &::before {
     content: "";
@@ -36,6 +36,7 @@
 
   &::after {
     content: "";
+    bottom: 0;
     position: absolute;
     height: 277px;
     width: 100%;
@@ -60,15 +61,34 @@
 }
 
 .features__description {
-  margin-top: 10px;
+  margin-top: 11px;
   .usually-text();
   line-height: 24px;
   color: @blue;
 }
 
 @media (min-width: @tablet-width) {
+  .features {
+    margin-bottom: 45px;
+  }
+  .features__slogan-wrap{
+    margin-top: 47px;
+  }
+
+  .features__slogan {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .features__slogan:last-child {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
   .features__list {
-    padding-bottom: 0;
+    padding-top: 36px;
+    padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -86,6 +106,7 @@
 
   .features__item {
     margin-left: auto;
+    margin-top: 35px;
     width: 50%;
     text-align: left;
     padding: 0;
@@ -93,11 +114,25 @@
 }
 
 @media (min-width: @desktop-width) {
+  .features {
+    padding-bottom: 18px;
+    margin-bottom: 0;
+  }
+
+  .features__slogan-wrap {
+    margin-top: 67px;
+    padding-bottom: 46px;
+  }
+
+  .features__slogan {
+    font-size: 50px;
+  }
+
   .features__list {
     display: flex;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0;
+    padding-right: 0;
 
     &::after {
       display: none;
@@ -106,7 +141,7 @@
 
   .features__item {
     position: relative;
-    margin-top: 302px;
+    margin-top: 312px;
     margin-right: auto;
     width: 30%;
     text-align: center;
@@ -116,7 +151,7 @@
       position: absolute;
       height: 302px;
       width: 100%;
-      top: -302px;
+      top: -358px;
       left: 0;
     }
   }
@@ -137,5 +172,18 @@
     background-image: url("../img/iphone-screen3-desktop.png");
     background-repeat: no-repeat;
     background-position: top, center;
+  }
+
+  .features__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 23px;
+    padding: 0 30px;
+  }
+
+  .features__description {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 20px;
   }
 }

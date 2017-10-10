@@ -12,38 +12,123 @@
   }
 }
 
+.page-footer__logo {
+  margin-top: 41px;
+}
+
+.page-footer__logo:hover:not(:active) path {
+  fill: @pink;
+}
+
+.page-footer__logo:active {
+  opacity: 0.3;
+}
+
 .page-footer__social-list {
+  display: flex;
   .option-list();
-  margin: 37px 0;
+  margin: 36px 0;
+  margin-bottom: 37px;
+}
+
+.page-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 6px;
+  width: 45px;
+  height: 45px;
+  background-color: @white;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+
+  &:hover {
+    background-color: @white-2;
+    border: 3px solid rgb(40, 54, 69);
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: @white;
+    border: 3px solid rgba(40, 54, 69, 0.4);
+  }
+}
+
+.page-footer__social-link path {
+  fill: @pink;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page-footer__copyright-text {
   .usually-text();
   line-height: 18px;
   color: @blue;
+  margin-right: 15px;
+}
+
+.page-footer__copyright-link path {
+  fill: @pink;
+}
+
+.page-footer__copyright-link:hover path {
+  fill: @blue;
+}
+
+.page-footer__copyright-link:active path {
+  fill: rgba(40, 54, 69, 0.3);
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
 
     &--hidden {
       display: flex;
     }
   }
 
+  .page-footer__logo {
+    margin-top: 0;
+    align-self: flex-start;
+  }
+
   .page-footer__social-list {
-    margin: 40px 0;
+    margin: 0;
+  }
+
+  .page-footer__copyright {
+    margin-left: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
     padding: 0 10px;
+    align-items: baseline;
+  }
+
+  .page-footer__logo {
+    margin-right: 6px;
   }
 
   .page-footer__social-list {
-    margin: 75px 0;
+    margin: 0 auto;
+  }
+
+  .page-footer__copyright {
+    margin-left: -10px;
+    align-items: center;
+  }
+
+  .page-footer__copyright-text {
+    font-size: 18px;
+    line-height: 18px;
   }
 }

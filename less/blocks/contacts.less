@@ -1,17 +1,18 @@
 .contacts {
-  box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  // box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  background-color: @white;
 }
 
 .contacts__info {
   position: relative;
-  background-color: @white;
+  padding-top: 17px;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -75px;
+    bottom: -80px;
     left: 0;
-    height: 75px;
+    height: 80px;
     width: 100%;
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
@@ -23,22 +24,7 @@
   .title-text();
   color: @blue;
   text-align: center;
-}
-
-.contacts__title {
-  margin-top: 18px;
-  .bold-text();
-  line-height: 22px;
-  color: @blue;
-  text-align: center;
-}
-
-.contacts__link {
-  .title-text();
-  color: @pink;
-  text-align: center;
-  text-decoration: none;
-  display: block;
+  margin-bottom: 0;
 }
 
 .contacts__list {
@@ -47,22 +33,92 @@
   padding: 0 20px;
 }
 
+.contacts__title {
+  .bold-text();
+  line-height: 22px;
+  color: @blue;
+  text-align: center;
+  margin-top: 22px;
+}
+
+.contacts__link {
+  .title-text();
+  color: @pink;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  &--mail:hover {
+    color: @blue;
+    text-decoration: underline;
+  }
+
+  &--mail:active {
+    color: rgba(40, 54, 69, 0.3);
+    text-decoration: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .contacts {
+    margin-bottom: 25px;
+  }
+
+  .contacts__info {
+    padding-top: 45px;
+  }
+
+  .contacts__slogan {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 40px;
+  }
+
   .contacts__list {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 10px;
   }
 
   .contacts__title {
-    width: 50%;
-    padding-top: 50px;
+    width: 45%;
+    padding-top: 29px;
+    padding-bottom: 17px;
     margin: 0 auto;
+  }
+
+  .contacts__link {
+    padding-top: 7px;
+  }
+
+  .contacts__info {
+    &::after {
+      bottom: -78px;
+      height: 62px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    margin-bottom: 68px;
+  }
+
+  .contacts__info {
+    padding-top: 63px;
+  }
+
+  .contacts__slogan {
+    font-size: 50px;
+  }
+
   .contacts__list {
+    padding: 0;
+    margin-top: 28px;
+    margin-bottom: 25px;
     flex-wrap: nowrap;
   }
 
@@ -72,5 +128,9 @@
 
   .contacts__title:nth-child(2) {
     order: 2;
+  }
+
+  .contacts__link {
+    padding-top: 25px;
   }
 }

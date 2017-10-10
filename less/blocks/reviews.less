@@ -1,7 +1,11 @@
 .reviews {
-  box-shadow: 0 0 0 2px rgb(255, 45, 82);
-  margin-bottom: 45px;
+  // box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  margin-bottom: 50px;
   padding: 0 20px;
+}
+
+.reviews__btn {
+  display: none;
 }
 
 .reviews__list {
@@ -41,6 +45,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .reviews {
+    margin-bottom: 12px;
+  }
+
   .reviews__item {
     display: flex;
     flex-direction: column-reverse;
@@ -50,11 +58,71 @@
   .reviews__author-desc {
     display: block;
   }
+
+  .reviews__author {
+    font-size: 20px;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+    margin-bottom: 36px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .reviews {
+    margin-bottom: 50px;
+    padding: 0 14px;
+  }
+
   .reviews__wrap {
-    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews__btn {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 42px;
+    border: 0;
+    margin: auto 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 32px;
+      border: 2px solid rgba(40, 54, 69, 0.3);
+      width: 28px;
+      height: 28px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &--prev::before {
+      left: 0;
+      border-right: 0;
+      border-top: 0;
+    }
+
+    &--next::before {
+      right: 0;
+      border-left: 1px;
+      border-bottom: 1px;
+    }
+  }
+
+  .reviews__btn:hover::before,
+  .reviews__btn:focus::before {
+    border-color: rgba(40, 54, 69, 0.6);
+  }
+
+  .reviews__btn:active::before {
+    border-color: rgba(40, 54, 69, 0.1);
   }
 
   .reviews__list {
@@ -72,11 +140,21 @@
   }
 
   .reviews__item {
-    padding-top: 63px;
+    width: 698px;
+    padding-top: 98px;
+    margin: 0 auto;
   }
 
   .reviews__item:nth-child(n+2) {
     display: none;
+  }
+
+  .reviews__author-desc {
+    font-size: 18px;
+  }
+
+  .reviews__author {
+    font-size: 24px;
   }
 
   .reviews__toggles {

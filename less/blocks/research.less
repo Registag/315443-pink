@@ -8,10 +8,14 @@
     box-sizing: border-box;
     width: 50%;
     padding-right: 30px;
+    padding-bottom: 20px;
+    padding-top: 27px;
     margin-left: auto;
+    margin-bottom: 70px;
   }
 
   .research__title {
+    margin-bottom: 10px;
     .bold-text();
     font-size: 30px;
     line-height: 36px;
@@ -19,12 +23,15 @@
   }
 
   .research__text {
+    margin: 0;
     .usually-text();
     line-height: 24px;
     color: @blue;
   }
 
   .research__link {
+    display: block;
+    margin-top: -5px;
     .usually-text();
     line-height: 24px;
     color: @pink;
@@ -33,10 +40,28 @@
 
 @media (min-width: @desktop-width) {
   .research {
-    width: 60%;
+    width: 61%;
+    padding-top: 68px;
+    padding-bottom: 96px;
+    background-color: @gray;
   }
 
   .research br {
     display: none;
+  }
+
+  .research__title {
+    margin-bottom: 20px;
+  }
+
+  .research__text {
+    margin-bottom: 36px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

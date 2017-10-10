@@ -1,12 +1,18 @@
-var link = document.querySelector(".main-nav__toggle");
-var menu = document.querySelector(".main-nav__list");
+var navMain = document.querySelector('.main-nav');
+var navToggle = document.querySelector('.main-nav__toggle');
 var header = document.querySelector(".page-header");
-var menuopen = document.querySelector(".main-nav__list-show");
-var logo = document.querySelector(".page-header__logo");
 
-link.addEventListener("click", function (event) {
-  event.preventDefault();
-  menu.classList.add("main-nav__list-show");
-  header.classList.add("page-header-open");
-  link.classList.add("main-nav__toggle-cross");
+navMain.classList.remove('main-nav--nojs');
+header.classList.remove('page-header--nojs');
+
+navToggle.addEventListener('click', function() {
+  if (navMain.classList.contains('main-nav--closed')) {
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
+    header.classList.add('page-header--opened');
+  } else {
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+    header.classList.remove('page-header--opened');
+  }
 });
