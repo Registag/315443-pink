@@ -1,7 +1,20 @@
-.features {
+.features__wrap {
   // box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  position: relative;
   margin-bottom: 41px;
   background-color: @gray;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -34px;
+    right: 0;
+    height: 94px;
+    width: 100%;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: repeat;
+    background-position: center;
+  }
 }
 
 .features__slogan-wrap {
@@ -19,27 +32,17 @@
 
 .features__list {
   position: relative;
-  .option-list();
+  list-style: none;
   padding-top: 44px;
   padding-bottom: 305px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 94px;
-    width: 100%;
-    background-image: url("../img/bg-triangle-white.svg");
-    background-position: right;
-  }
 
   &::after {
     content: "";
     bottom: 0;
     position: absolute;
+    padding: 0;
     height: 277px;
-    width: 100%;
+    width: 280px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: top, center;
@@ -49,8 +52,6 @@
 .features__item {
   margin-top: 32px;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .features__title {
@@ -72,6 +73,12 @@
     margin-bottom: 45px;
   }
 
+  .features__wrap {
+    &::before {
+      top: -20px;
+    }
+  }
+
   .features__slogan-wrap {
     margin-top: 47px;
   }
@@ -90,8 +97,6 @@
   .features__list {
     padding-top: 36px;
     padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
 
     &::after {
       content: "";
@@ -107,7 +112,7 @@
 
   .features__item {
     margin-left: auto;
-    margin-top: 35px;
+    margin-top: 36px;
     width: 50%;
     text-align: left;
     padding: 0;
@@ -116,8 +121,16 @@
 
 @media (min-width: @desktop-width) {
   .features {
+    margin-bottom: 0;
+  }
+
+  .features__wrap {
     padding-bottom: 18px;
     margin-bottom: 0;
+
+    &::before {
+      top: -10px;
+    }
   }
 
   .features__slogan-wrap {

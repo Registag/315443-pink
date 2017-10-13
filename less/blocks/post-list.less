@@ -2,21 +2,23 @@
   display: flex;
   flex-direction: column;
   // box-shadow: 0 0 0 2px rgb(255, 45, 82);
-
-  .option-list();
+  list-style: none;
 }
 
 .post-list__item {
   display: flex;
   flex-direction: column;
   // box-shadow: 0 0 0 3px green;
-
   margin-bottom: 20px;
 }
 
 .post-list__wrap {
   display: flex;
   flex-direction: column;
+
+  &--panorama {
+    margin-bottom: 20px;
+  }
 }
 
 .post-list__photo {
@@ -29,9 +31,8 @@
   flex-direction: column;
   align-items: flex-start;
   background-color: @gray;
-  padding: 0;
-  margin: 0 20px;
-  padding-top: 17px;
+  padding-bottom: 0;
+  padding-top: 18px;
   padding-left: 18px;
   padding-right: 18px;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -39,6 +40,11 @@
   line-height: 24px;
   color: @blue;
   font-style: normal;
+
+  &--panorama {
+    width: 244px;
+    margin: 0 auto;
+  }
 }
 
 .post-list__author-wrap {
@@ -53,6 +59,7 @@
 
 .post-list__text {
   margin: 0;
+  width: 100%;
 }
 
 .post-list__like-wrap {
@@ -60,7 +67,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-top: 9px;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 }
 
 .post-list__button {
@@ -74,6 +81,7 @@
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .post-list__likes {
@@ -91,25 +99,32 @@
   .post-list {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: stretch;
   }
 
   .post-list__item {
-    margin-left: 20px;
     width: 300px;
     background-color: @gray;
-
-    &--panorama {
-      width: 100%;
-      margin-left: 0;
-      margin-bottom: 50px;
-      background-color: transparent;
-    }
   }
 
   .post-list__wrap {
     height: 100%;
+
+    &--panorama {
+      margin-bottom: 50px;
+    }
+  }
+
+  .post-list__photo {
+    width: 300px;
+    height: 300px;
+
+    &--panorama {
+      width: 680px;
+      height: 509px;
+    }
   }
 
   .post-list__text-wrap {
@@ -118,22 +133,26 @@
     flex-wrap: wrap;
     align-content: flex-start;
     height: 100%;
-    padding-right: 9px;
-    padding-left: 8px;
+    padding-right: 28px;
+    padding-left: 28px;
     padding-top: 24px;
     padding-bottom: 24px;
 
-
     &--panorama {
       justify-content: space-between;
+      width: 564px;
+      margin: 0 auto;
       padding-bottom: 24px;
-      padding-right: 28px;
-      padding-left: 28px;
     }
   }
 
   .post-list__author-wrap {
     order: -2;
+    width: 100%;
+
+    &--panorama {
+      width: auto;
+    }
   }
 
   .post-list__text {
@@ -155,29 +174,49 @@
     }
   }
 
-  .post-list__button {
+  .post-list__like-wrap--panorama .post-list__button {
     margin-right: 0;
+  }
+
+  .post-list__button {
+    margin-right: 4px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .post-list {
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  .post-list__wrap {
+    &--panorama {
+      margin-bottom: 48px;
+    }
   }
 
   .post-list__item {
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
 
     &--panorama {
       margin-bottom: 50px;
     }
   }
 
+  .post-list__photo {
+    width: 300px;
+    height: 400px;
+
+    &--panorama {
+      width: 1200px;
+      height: 506px;
+    }
+  }
+
   .post-list__text-wrap {
     &--panorama {
-      margin: 0 10px;
+      width: 884px;
       padding-bottom: 0;
     }
   }

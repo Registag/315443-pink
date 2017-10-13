@@ -6,12 +6,27 @@
   .research {
     display: block;
     box-sizing: border-box;
-    width: 50%;
-    padding-right: 30px;
     padding-bottom: 20px;
     padding-top: 27px;
+    margin-bottom: 68px;
+  }
+
+  .research__wrap {
+    position: relative;
+    width: 50%;
     margin-left: auto;
-    margin-bottom: 70px;
+
+    &::after {
+      content: "";
+      width: 238px;
+      height: 276px;
+      position: absolute;
+      top: -35px;
+      left: -308px;
+      background-image: url("../img/24.png");
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
   }
 
   .research__title {
@@ -26,6 +41,7 @@
     margin: 0;
     .usually-text();
     line-height: 24px;
+    padding-right: 10px;
     color: @blue;
   }
 
@@ -40,10 +56,13 @@
 
 @media (min-width: @desktop-width) {
   .research {
-    width: 61%;
     padding-top: 68px;
     padding-bottom: 96px;
     background-color: @gray;
+  }
+
+  .research__wrap {
+    width: 61%;
   }
 
   .research br {

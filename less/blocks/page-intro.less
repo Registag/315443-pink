@@ -1,28 +1,23 @@
 .page-intro {
   // box-shadow: 0 0 0 2px blue;
 
-  width: 320px;
+  width: 100%;
   min-height: 239px;
   margin-top: -65px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-color: #1d2631;
+}
 
-  &--big {
-    width: 320px;
-    height: 100%;
-    background-image:
-      url("../img/iphone-hand-mobile@1x.png"),
-      url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: left top 176px, center top;
-  }
+.page-intro__hand {
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: left top 176px;
 }
 
 .page-intro__slogan {
   margin: auto;
-  padding: 0 20px;
   padding-top: 100px;
   .title-text();
   color: @white;
@@ -36,25 +31,21 @@
 
 @media (min-width: @tablet-width) {
   .page-intro {
-    width: 660px;
+    width: 100%;
     min-height: 440px;
     margin-top: -110px;
     background-image: url("../img/bg-back-tablet.jpg");
     background-repeat: no-repeat;
     background-position: center top;
+  }
 
-    &--big {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      min-height: 729px;
-      margin-top: -110px;
-      background-image:
-        url("../img/iphone-hand-tablet.png"),
-        url("../img/bg-back-tablet.jpg");
-      background-repeat: no-repeat;
-      background-position: right 20px top 184px, center top;
-    }
+  .page-intro__hand {
+    display: flex;
+    flex-direction: column;
+    min-height: 729px;
+    background-image: url("../img/iphone-hand-tablet.png");
+    background-repeat: no-repeat;
+    background-position: right 20px top 184px;
   }
 
   .page-intro__slogan {
@@ -76,22 +67,19 @@
 
 @media (min-width: @desktop-width) {
   .page-intro {
-    width: 960px;
+    width: 100%;
     min-height: 396px;
     margin-top: -110px;
     background-image: url("../img/bg-back-desktop.jpg");
     background-repeat: no-repeat;
     background-position: center top;
+  }
 
-    &--big {
-      width: 960px;
-      min-height: 853px;
-      background-image:
-        url("../img/iphone-hand-desktop.png"),
-        url("../img/bg-back-desktop.jpg");
-      background-repeat: no-repeat;
-      background-position: right 50px top 209px, center top;
-    }
+  .page-intro__hand {
+    min-height: 853px;
+    background-image: url("../img/iphone-hand-desktop.png");
+    background-repeat: no-repeat;
+    background-position: right 50px top 209px;
   }
 
   .page-intro__slogan {

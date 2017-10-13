@@ -6,10 +6,11 @@
 .upload__slogan {
   background-color: @white;
   margin-bottom: 42px;
+  padding: 0 30px;
 }
 
 .upload__text {
-  margin: 0 18px;
+  margin: 0;
   .usually-text();
   line-height: 30px;
   color: @blue;
@@ -17,11 +18,15 @@
 }
 
 .upload__form {
+  background-color: @gray;
+}
+
+.upload__form-wrap {
   display: flex;
   flex-direction: column;
+  padding: 0;
   padding-top: 20px;
   padding-bottom: 30px;
-  background-color: @gray;
 }
 
 .upload__photo {
@@ -198,7 +203,7 @@
     margin-bottom: 33px;
   }
 
-  .upload__form {
+  .upload__form-wrap {
     flex-direction: row;
     align-items: stretch;
     padding-top: 47px;
@@ -310,10 +315,14 @@
   }
 
   .upload__form {
-    margin-left: 10px;
-    margin-right: 10px;
+    background-color: @white;
+  }
+
+  .upload__form-wrap {
+    width: 940px;
     padding-bottom: 33px;
     margin-bottom: 100px;
+    background-color: @gray;
   }
 
   .upload__photo-wrap {
@@ -371,10 +380,10 @@
   }
 
   .upload__btn {
-    width: 45%;
+    width: 44%;
     margin-left: 10px;
     margin-right: 0;
-    margin-top: 142px;
+    margin-top: 140px;
     margin-bottom: 22px;
 
     &--cancel {

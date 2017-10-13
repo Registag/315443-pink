@@ -1,6 +1,7 @@
-// .achievement {
-//   box-shadow: 0 0 0 2px rgb(255, 45, 82);
-// }
+.achievement {
+  background-color: @gray;
+  width: 100%;
+}
 
 .achievement__item {
   padding-bottom: 52px;
@@ -11,7 +12,7 @@
 }
 
 .achievement__heading {
-  padding: 40px;
+  padding: 20px;
   padding-top: 37px;
   padding-bottom: 44px;
   .usually-text();
@@ -29,7 +30,6 @@
 .achievement__title {
   position: relative;
   padding-left: 70px;
-
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -69,10 +69,13 @@
 
 @media (min-width: @tablet-width) {
   .achievement {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
+    background-color: @white;
   }
 
   .achievement__heading {
+    margin-left: 89px;
+    margin-right: 89px;
     padding: 10px 32px;
     background-color: @white;
   }
@@ -89,8 +92,16 @@
 
 @media (min-width: @desktop-width) {
   .achievement {
-    width: 100%;
-    margin-bottom: 38px;
+    margin-bottom: 23px;
+  }
+
+  .achievement__wrap {
+    width: 940px;
+  }
+
+  .achievement__heading {
+    margin-left: 249px;
+    margin-right: 249px;
   }
 
   .achievement__list {
@@ -98,6 +109,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
+    padding-top: 38px;
     padding-bottom: 10px;
     padding-right: 10px;
     margin: 0;
