@@ -1,21 +1,10 @@
 .price {
   position: relative;
   margin-bottom: 4px;
-  padding-top: 65px;
+  padding-top: 105px;
   // box-shadow: 0 0 0 2px rgb(255, 45, 82);
   background-color: @gray;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -34px;
-    left: 0;
-    height: 92px;
-    width: 100%;
-    background-image: url("../img/bg-triangle-white.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  background-image: linear-gradient(176deg, #ffffff 69px, #f2f2f2 69px);
 }
 
 .price__list {
@@ -122,13 +111,10 @@
 
 @media (min-width: @tablet-width) {
   .price {
-    padding-top: 62px;
+    padding-top: 72px;
     padding-bottom: 0;
     margin-bottom: 0;
-
-    &::before {
-      top: -20px;
-    }
+    background-image: linear-gradient(176deg, #ffffff 68px, #f2f2f2 68px);
   }
 
   .price__wrap {
@@ -215,7 +201,7 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: width-except-desktop) {
+@media (min-width: @tablet-width) and (max-width: @width-except-desktop) {
   .price__hit {
     position: absolute;
     top: -1px;
@@ -236,9 +222,8 @@
 
 @media (min-width: @desktop-width) {
   .price {
-    &::before {
-      top: -8px;
-    }
+    padding-top: 186px;
+    background-image: linear-gradient(176deg, #ffffff 135px, #f2f2f2 135px);
   }
 
   .price__list {
@@ -247,7 +232,7 @@
   }
 
   .price__header {
-    margin-top: 78px;
+    margin-top: 0;
   }
 
   .price__title {
