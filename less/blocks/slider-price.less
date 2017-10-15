@@ -1,0 +1,45 @@
+@media (max-width: @width-only-mobile) {
+  .slider-price {
+    padding: 0;
+  }
+
+  .slider-price__item {
+    transform: translateX(-258px);
+  }
+
+  .slider-price__toggles {
+    bottom: -12px;
+    left: 0;
+    height: 20px;
+    margin: 0;
+    padding-top: 38px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .slider-price__toggle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    padding: 0;
+    background-color: rgba(40, 54, 69, 0.3);
+    border: 3px solid #f2f2f2;
+    vertical-align: middle;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &--active {
+      background-color: @white;
+      border-color: @blue;
+    }
+  }
+
+  .slider-price__toggle:hover {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+
+  .slider-price__toggle:active {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+}

@@ -1,5 +1,6 @@
 .photos {
-  box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  margin-bottom: 24px;
+  // box-shadow: 0 0 0 2px rgb(255, 45, 82);
 }
 
 .photos__title {
@@ -14,16 +15,38 @@
 }
 
 .photos__slogan {
-  padding: 46px 18px;
+  padding: 29px 17px;
   .usually-text();
   line-height: 30px;
   color: @blue;
   text-align: center;
+  margin-bottom: 18px;
 }
 
 @media (min-width: @tablet-width) {
+  .photos {
+    margin-bottom: 45px;
+  }
+
   .photos__slogan {
     margin: 0 auto;
-    width: 70%;
+    padding-top: 90px;
+    padding-bottom: 78px;
+    width: 72%;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos {
+    margin-bottom: 5px;
+  }
+
+  .photos__slogan {
+    width: 62%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 92px;
+    padding-bottom: 87px;
   }
 }

@@ -1,6 +1,6 @@
-.competition {
-  box-shadow: 0 0 0 2px rgb(255, 45, 82);
-}
+// .competition {
+//   box-shadow: 0 0 0 2px rgb(255, 45, 82);
+// }
 
 .competition__title {
   .title-text();
@@ -14,8 +14,8 @@
 }
 
 .competition__slogan {
-  margin: 0 20px;
-  padding: 46px 0;
+  padding: 28px 0;
+  padding-bottom: 0;
   .usually-text();
   line-height: 30px;
   color: @blue;
@@ -27,7 +27,28 @@
 }
 
 @media (min-width: @tablet-width) {
+  .competition__slogan {
+    padding: 74px 40px;
+    padding-bottom: 52px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
   .competition__text {
     display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .competition__slogan {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 72px;
+    padding-bottom: 42px;
+  }
+
+  .competition__form {
+    width: 960px;
+    margin: 0 auto;
   }
 }

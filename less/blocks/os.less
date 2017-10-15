@@ -1,39 +1,125 @@
 .os {
-  box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  // box-shadow: 0 0 0 2px rgb(255, 45, 82);
+  background-color: @gray;
+  width: 100%;
+}
+
+.os__wrap {
+  margin-bottom: 13px;
+}
+
+.os__item {
+  padding-bottom: 46px;
+}
+
+.os__item:last-child {
+  padding-bottom: 48px;
 }
 
 .os__heading {
-  padding: 40px 40px;
+  padding: 40px;
+  padding-top: 37px;
+  padding-bottom: 37px;
   .usually-text();
   line-height: 18px;
   color: @pink;
   text-transform: uppercase;
   text-align: center;
-  background-color: @gray;
+}
+
+.os__radio {
+  display: none;
 }
 
 .os__title {
+  position: relative;
+  padding-left: 70px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   font-style: normal;
   font-weight: 400;
   color: @blue;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    background-color: @white;
+    border: 2px solid @gray-dark;
+    border-radius: 50%;
+  }
+}
+
+.os__title:hover::before {
+  border: 2px solid @blue;
+}
+
+.os__title:active::before {
+  border: 2px solid @pink;
+}
+
+.os__radio:checked + .os__title::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+  background-color: @pink;
+  border-radius: 50%;
 }
 
 @media (min-width: @tablet-width) {
   .os {
     order: -2;
+    margin-bottom: 30px;
+    background-color: @white;
   }
 
   .os__heading {
+    margin-left: 124px;
+    margin-right: 124px;
+    padding: 10px 25px;
     background-color: @white;
+  }
+
+  .os__list {
+    padding-top: 35px;
+    padding-left: 58px;
+    padding-bottom: 10px;
+  }
+
+  .os__title {
+    padding-left: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .os {
+    width: 454px;
+  }
+
+  .os__wrap {
     width: 434px;
-    padding: 0;
+  }
+
+  .os__heading {
+    margin-left: 31px;
+    margin-right: 31px;
+  }
+
+  .os__list {
+    padding-top: 40px;
+    padding-left: 72px;
+  }
+
+  .os__item {
+    padding-bottom: 45px;
   }
 }

@@ -6,12 +6,31 @@
   .research {
     display: block;
     box-sizing: border-box;
+    padding-bottom: 20px;
+    padding-top: 27px;
+    margin-bottom: 68px;
+  }
+
+  .research__wrap {
+    position: relative;
     width: 50%;
-    padding-right: 30px;
     margin-left: auto;
+
+    &::after {
+      content: "";
+      width: 238px;
+      height: 276px;
+      position: absolute;
+      top: -35px;
+      left: -308px;
+      background-image: url("../img/24.png");
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
   }
 
   .research__title {
+    margin-bottom: 10px;
     .bold-text();
     font-size: 30px;
     line-height: 36px;
@@ -19,12 +38,16 @@
   }
 
   .research__text {
+    margin: 0;
     .usually-text();
     line-height: 24px;
+    padding-right: 10px;
     color: @blue;
   }
 
   .research__link {
+    display: block;
+    margin-top: -5px;
     .usually-text();
     line-height: 24px;
     color: @pink;
@@ -33,10 +56,31 @@
 
 @media (min-width: @desktop-width) {
   .research {
-    width: 60%;
+    padding-top: 68px;
+    padding-bottom: 96px;
+    background-color: @gray;
+  }
+
+  .research__wrap {
+    width: 61%;
   }
 
   .research br {
     display: none;
+  }
+
+  .research__title {
+    margin-bottom: 20px;
+  }
+
+  .research__text {
+    margin-bottom: 36px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
