@@ -59,6 +59,10 @@
     background-repeat: no-repeat;
   }
 
+  .main-nav__toggle {
+    cursor: pointer;
+  }
+
   .main-nav__toggle:active {
     opacity: 0.3;
   }
@@ -90,6 +94,10 @@
   .main-nav--opened .main-nav__toggle {
     top: 45px;
   }
+
+  .main-nav--closed .main-nav__toggle {
+    margin-top: 14px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -104,6 +112,7 @@
   }
 
   .main-nav__item {
+    padding-top: 18px;
     margin-left: 79px;
   }
 
