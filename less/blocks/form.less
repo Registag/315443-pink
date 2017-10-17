@@ -228,6 +228,29 @@
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 21px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 58px;
+      height: 58px;
+      background-color: @gray;
+    }
+
+    &--tel::after {
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--mail::after {
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .form__contacts-item:nth-child(2) {
