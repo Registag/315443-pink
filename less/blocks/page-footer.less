@@ -17,6 +17,10 @@
   margin-top: 41px;
 }
 
+.page-footer__logo-svg .page-footer__logo-glass-stars {
+  display: none;
+}
+
 .page-footer__logo:hover:not(:active) path {
   fill: @pink;
 }
@@ -55,7 +59,7 @@
   }
 }
 
-.page-footer__social-link path {
+.page-footer__social-icon {
   fill: @pink;
 }
 
@@ -72,15 +76,15 @@
   margin-right: 15px;
 }
 
-.page-footer__copyright-link path {
+.page-footer__copyright-logo {
   fill: @pink;
 }
 
-.page-footer__copyright-link:hover path {
+.page-footer__copyright-logo:hover {
   fill: @blue;
 }
 
-.page-footer__copyright-link:active path {
+.page-footer__copyright-logo:active {
   fill: rgba(40, 54, 69, 0.3);
 }
 
@@ -119,6 +123,14 @@
 
   .page-footer__logo {
     margin-right: 6px;
+  }
+
+  .page-footer__logo-svg .page-footer__logo-glass-stars {
+    display: block;
+  }
+
+  .page-footer__logo-svg .page-footer__logo-glass {
+    display: none;
   }
 
   .page-footer__social-list {
