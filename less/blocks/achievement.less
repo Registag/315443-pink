@@ -60,6 +60,15 @@
   border: 2px solid @pink;
 }
 
+.achievement__checkbox:disabled + .achievement__title::before {
+  border: 2px solid rgba(40, 54, 69, 0.1);
+  background-color: transparent;
+}
+
+.achievement__checkbox:disabled + .achievement__title {
+  color: rgba(40, 54, 69, 0.2);
+}
+
 .achievement__checkbox:checked + .achievement__title::before {
   background-image: url("../img/icon-yes.svg");
   background-repeat: no-repeat;
@@ -91,10 +100,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .achievement {
-    margin-bottom: 23px;
-  }
-
   .achievement__wrap {
     width: 940px;
   }
@@ -110,7 +115,6 @@
     flex-wrap: wrap;
     align-content: space-between;
     padding-top: 38px;
-    padding-bottom: 10px;
     padding-right: 10px;
     margin: 0;
     height: 166px;

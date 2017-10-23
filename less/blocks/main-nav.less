@@ -1,7 +1,3 @@
-.main-nav {
-  // box-shadow: 0 0 0 3px green;
-}
-
 .main-nav__item {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -28,7 +24,12 @@
 
 @media (max-width: @width-except-desktop) {
   .main-nav--closed .main-nav__toggle {
-    width: 49px;
+    position: absolute;
+    display: block;
+    top: 21px;
+    right: 19px;
+    padding: 0;
+    width: 50px;
     height: 24px;
     border: 0;
     background-color: transparent;
@@ -46,8 +47,8 @@
     display: block;
     top: 21px;
     right: 19px;
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     border: 0;
     background-color: transparent;
     background-image: url("../img/icon-menu-cross.svg");
@@ -96,7 +97,7 @@
   }
 
   .main-nav--closed .main-nav__toggle {
-    margin-top: 14px;
+    top: 45px;
   }
 }
 
