@@ -1,10 +1,9 @@
 .features {
   background-color: @white;
-  background-image: linear-gradient(174deg, #ffffff 217px, #f2f2f2 217px);
+  background-image: linear-gradient(174deg, #ffffff 218px, #f2f2f2 219px);
 }
 
 .features__wrap {
-  // box-shadow: 0 0 0 2px rgb(255, 45, 82);
   margin-bottom: 41px;
 }
 
@@ -65,8 +64,8 @@
 
 @media (min-width: @tablet-width) {
   .features {
-    background-image: linear-gradient(176deg, #ffffff 240px, #f2f2f2 240px);
-    margin-bottom: 45px;
+    background-image: linear-gradient(176deg, #ffffff 245px, #f2f2f2 246px);
+    margin-bottom: 48px;
   }
 
   .features__slogan-wrap {
@@ -85,38 +84,42 @@
   }
 
   .features__list {
-    padding-top: 36px;
+    padding-top: 40px;
     padding-bottom: 30px;
 
     &::after {
       content: "";
       position: absolute;
-      height: 100%;
+      height: 481px;
       width: 268px;
-      top: 0;
-      background-image: url("../img/iphone-screen-1-tablet@1x.png");
+      bottom: 0;
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-repeat: no-repeat;
       background-position: bottom, center;
-      background-size: 268px auto;
+      background-size: 268px 481px;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/iphone-screen-1-tablet@2x.png");
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
       }
     }
   }
 
   .features__item {
     margin-left: auto;
-    margin-top: 36px;
+    margin-top: 33px;
     width: 50%;
     text-align: left;
     padding: 0;
+  }
+
+  .features__description {
+    margin-top: 12px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features {
-    background-image: linear-gradient(176deg, #ffffff 360px, #f2f2f2 360px);
+    background-image: linear-gradient(176deg, #ffffff 348px, #f2f2f2 349px);
     margin-bottom: 0;
   }
 
@@ -127,7 +130,7 @@
 
   .features__slogan-wrap {
     margin-top: 67px;
-    padding-bottom: 46px;
+    padding-bottom: 41px;
   }
 
   .features__slogan {

@@ -16,6 +16,7 @@ var del = require("del");
 var uglify = require("gulp-uglify");
 var svgmin = require("gulp-svgmin");
 var path = require("path");
+var htmlmin = require("gulp-htmlmin");
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -32,12 +33,13 @@ gulp.task("style", function() {
 
 gulp.task("html", function() {
   return gulp.src("*.html")
-  .pipe(gulp.dest("build"));
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("js", function() {
   return gulp.src("js/**/*.js")
-  .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("sprite", function() {

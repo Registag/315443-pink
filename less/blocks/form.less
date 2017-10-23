@@ -1,6 +1,6 @@
-// .form {
-//   box-shadow: 0 0 0 2px rgb(255, 45, 82);
-// }
+.form {
+  margin-bottom: 55px;
+}
 
 .form__user-name {
   border: 0;
@@ -25,6 +25,7 @@
 .form__field {
   box-sizing: border-box;
   width: 280px;
+  min-height: 62px;
   padding: 14px 20px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -235,7 +236,7 @@
       position: absolute;
       top: 2px;
       right: 2px;
-      width: 58px;
+      width: 60px;
       height: 58px;
       background-color: @gray;
     }
@@ -244,12 +245,14 @@
       background-image: url("../img/icon-phone.svg");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: 20px 20px;
     }
 
     &--mail::after {
       background-image: url("../img/icon-mail.svg");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: 18px 14px;
     }
   }
 
@@ -320,19 +323,23 @@
   }
 
   .form__user-name-list {
-    padding-top: 23px;
+    padding-top: 24px;
   }
 
   .form__user-name-item {
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   .form__user-name-item:last-child {
     margin-bottom: 0;
   }
 
+  .form__user-name-item .form__title {
+    padding-top: 18px;
+  }
+
   .form__user-contacts {
-    margin-bottom: 44px;
+    margin-bottom: 46px;
   }
 
   .form__part {
