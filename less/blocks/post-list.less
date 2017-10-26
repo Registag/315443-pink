@@ -1,4 +1,21 @@
 .post-list {
+  margin-bottom: 24px;
+}
+
+.post-list__slogan-wrap {
+  background-color: @white;
+}
+
+.post-list__slogan {
+  padding: 29px 17px;
+  .usually-text();
+  line-height: 30px;
+  color: @blue;
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.post-list__list {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -132,6 +149,18 @@
 
 @media (min-width: @tablet-width) {
   .post-list {
+    margin-bottom: 47px;
+  }
+
+  .post-list__slogan {
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 77px;
+    width: 72%;
+    font-size: 18px;
+  }
+
+  .post-list__list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -175,17 +204,21 @@
 
   .post-list__text-wrap {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    min-height: 155px;
+    box-sizing: border-box;
+    flex-grow: 1;
     padding-right: 28px;
     padding-left: 28px;
     padding-top: 24px;
     padding-bottom: 23px;
 
     &--panorama {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
       justify-content: space-between;
-      width: 564px;
+      width: 620px;
+      min-height: auto;
       margin: 0 auto;
       padding-bottom: 24px;
     }
@@ -199,10 +232,10 @@
       width: auto;
     }
   }
-
-  .post-list__text {
-    min-height: 48px;
-  }
+  //
+  // .post-list__text {
+  //   min-height: 48px;
+  // }
 
   .post-list__like-wrap {
     flex-direction: row-reverse;
@@ -230,6 +263,18 @@
 
 @media (min-width: @desktop-width) {
   .post-list {
+    margin-bottom: 2px;
+  }
+
+  .post-list__slogan {
+    width: 62%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 90px;
+    padding-bottom: 88px;
+  }
+
+  .post-list__list {
     justify-content: space-between;
     margin-bottom: 5px;
   }
@@ -274,8 +319,7 @@
 
   .post-list__text-wrap {
     &--panorama {
-      width: 884px;
-      padding-bottom: 0;
+      width: 940px;
     }
   }
 
