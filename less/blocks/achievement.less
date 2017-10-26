@@ -7,7 +7,7 @@
   padding-bottom: 52px;
 }
 
-.achievement__item:last-child {
+.achievement__column:last-child .achievement__item:last-child {
   padding-bottom: 48px;
 }
 
@@ -29,6 +29,7 @@
 
 .achievement__title {
   position: relative;
+  display: block;
   padding-left: 70px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -111,17 +112,15 @@
 
   .achievement__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-between;
+    justify-content: space-between;
     padding-top: 38px;
-    padding-right: 10px;
+    padding-bottom: 8px;
     margin: 0;
-    height: 166px;
   }
 
-  .achievement__item {
-    max-width: 33%;
-    margin-right: 55px;
+  .achievement__title {
+    max-width: 200px;
   }
 }

@@ -108,13 +108,15 @@
 
   .main-nav__list {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 620px;
+    max-width: 710px;
     .option-list;
   }
 
   .main-nav__item {
     padding-top: 18px;
-    margin-left: 79px;
   }
 
   .main-nav__item--active {
@@ -138,5 +140,9 @@
     font-weight: 400;
     line-height: 18px;
     text-transform: none;
+
+    &[href]:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
